@@ -1,0 +1,13 @@
+<form [formGroup]="searchForm">
+  <div class="form-group">
+    <label for="search">Search for: </label>
+    <input type="text" class="form-control" formControlName="term" (keydown.enter)="onEnter()" required>
+    <button type="submit" style="margin-left: 5px;" (click)="onSubmit()">Submit</button>
+  </div> 
+  <div>
+    <input type="radio" value="google" formControlName="searchEngine">
+    <label for="google">Google</label>
+    <input type="radio" value="bing" formControlName="searchEngine">
+    <label for="bing">Bing</label>
+  </div>
+</form>
