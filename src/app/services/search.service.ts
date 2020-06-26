@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class SearchService {
 
-  private readonly result = new BehaviorSubject<Search>({ term: '', searchEngine: ''});
+  private result = new BehaviorSubject<Search>({ term: '', searchEngine: ''});
 
   constructor(private router: Router) { }
 
