@@ -1,0 +1,17 @@
+<a routerLink="/home-page">HOME</a>
+&nbsp;|&nbsp;
+<span *ngIf="engine; else bing">
+  <span>Go to
+    <a href="https://www.google.com">Google!</a>
+     and search for {{ searchObject.term }}.
+  </span>
+  <embed src="https://www.google.com" type="text/html">
+</span>
+
+<ng-template #bing>
+  <span>Go to
+    <a href="https://www.bing.com">Bing!</a>
+    and search for {{ searchObject.term }}.
+  </span>
+  <embed src="https://www.bing.com" type="text/html">
+</ng-template>
