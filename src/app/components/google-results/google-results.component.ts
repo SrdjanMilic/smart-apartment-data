@@ -15,6 +15,7 @@ export class GoogleResultsComponent implements OnInit, OnDestroy {
   constructor(private searchService: SearchService) { }
 
   ngOnInit() {
+    // Get object data from state service
     this.subscription = this.searchService.getSearchValues().subscribe(data => {
       this.searchObject = data;
     });

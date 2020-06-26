@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { BehaviorSubject, Observable } from 'rxjs';
 import { SearchService } from '../../services/search.service';
 
 @Component({
@@ -25,7 +24,9 @@ export class HomePageComponent implements OnInit {
   }
 
   onSubmit() {
+    // Set Behavior Subject object values
     this.searchService.setSearchValues(this.searchForm.value);
+    // Call page redirection function
     this.searchService.redirect();
   }
 }
