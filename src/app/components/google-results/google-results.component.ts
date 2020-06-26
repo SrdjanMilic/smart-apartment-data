@@ -12,7 +12,7 @@ export class GoogleResultsComponent implements OnInit, OnDestroy {
 
   searchObject: any;
 
-  constructor(public searchService: SearchService) { }
+  constructor(private searchService: SearchService) { }
 
   ngOnInit() {
     this.subscription = this.searchService.getSearchValues().subscribe(data => {
